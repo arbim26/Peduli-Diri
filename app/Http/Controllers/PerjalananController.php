@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class PerjalananController extends Controller
 {
     public function perjalanan()
-    {
-        $tampilkan_data = Auth::user()->data()->paginate(10);
+    { 
+        // $tampilkan_data = Auth::user()->data()->paginate(10); 
         // $jumlah_data = count($tampilkan_data['data']);
         return view('perjalanan.perjalanan', compact('tampilkan_data'));
     }
@@ -24,10 +24,5 @@ class PerjalananController extends Controller
         Perjalanan::create($request->all());
         return redirect(route('perjalanan'))->with('message','Sending infomation successfully');
     }
-
-    // public function index()
-    // {
-
-    // }
     
 }

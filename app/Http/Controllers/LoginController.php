@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -20,9 +22,11 @@ class LoginController extends Controller
 
     public function postlogin(Request $request)
     {
-        if(Auth::guard('user')->attempt((['email' => $request->email, 'password' => $request->password]))) 
-        {
+      // (Auth::guard('admin')->attempt((['email' => $request->email, 'password' => $request->password])))
+       if(Auth::guard('user')->attempt((['email' => $request->email, 'password' => $request->password]))) {
           return redirect('/dashboard');
+        }elseif(Auth::guard('admin')->attempt((['email' => $request->email, 'password' => $request->password]))) {
+          return redirect('/admin');
         }
         return redirect('/login');
     }

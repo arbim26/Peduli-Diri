@@ -26,6 +26,7 @@ Route::post('/registernew',[LoginController::class, 'registernew']);
 Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::middleware(['auth:user'])->group(function () {
+
     Route::get('/dashboard', function () {
         return view('index');
     });
@@ -35,7 +36,11 @@ Route::middleware(['auth:user'])->group(function () {
 Route::get('/tambah', function () {
     return view('tambah.tambah');
 });
-Route::post('/insert', [PerjalananController::class, 'create']);
+
 
 
 });
+Route::get('/admin', function () {
+    return view('indexadmin');
+});
+Route::post('/insert', [PerjalananController::class, 'create']);
