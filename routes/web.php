@@ -33,12 +33,13 @@ Route::middleware(['auth:user'])->group(function () {
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
     Route::get('/tambah', function () {
         return view('tambah.tambah');
-});
-
-
-
+    });
+    
+    
+    
 });
 Route::get('/admin', function () {
     return view('indexadmin');
 });
+
 Route::post('/insert', [PerjalananController::class, 'create']);

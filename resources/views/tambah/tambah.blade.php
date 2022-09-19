@@ -13,7 +13,7 @@
                     @csrf
                     <div class="form-group">
                       <label for="nik">Nik</label>
-                      <input type="number" name="nik" class="form-control" id="nik" placeholder="Nik">
+                      <input type="number" name="user_id" class="form-control" id="user_id" placeholder="ID USER">
                     </div>
                     <div class="form-group">
                       <label for="tanggal">Tanggal</label>
