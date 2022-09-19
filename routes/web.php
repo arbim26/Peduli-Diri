@@ -31,10 +31,8 @@ Route::middleware(['auth:user'])->group(function () {
         return view('index');
     });
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
-
-    
-Route::get('/tambah', function () {
-    return view('tambah.tambah');
+    Route::get('/tambah', function () {
+        return view('tambah.tambah');
 });
 
 

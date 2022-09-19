@@ -14,7 +14,8 @@ class PerjalananController extends Controller
     { 
         // $tampilkan_data = Auth::user()->data()->paginate(10); 
         // $jumlah_data = count($tampilkan_data['data']);
-        return view('perjalanan.perjalanan', compact('tampilkan_data'));
+        $data = perjalanan::all();
+        return view('perjalanan.perjalanan', compact('data'));
     }
 
     
