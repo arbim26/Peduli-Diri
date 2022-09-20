@@ -12,13 +12,31 @@ class PerjalananController extends Controller
 {
     public function perjalanan()
     { 
-        // $tampilkan_data = Auth::user()->data()->paginate(10); 
-        // $jumlah_data = count($tampilkan_data['data']);
-        $data = perjalanan::all();
+        $user = User::find(Auth::user()->id);
+        $data = perjalanan::where('user_id', $user->id)->get();
         return view('perjalanan.perjalanan', compact('data'));
     }
 
-    
+    // public function create(Request $request)
+    // {
+    //     $user = User::find(Auth::user()->id);
+    //     // dd($user);
+    //     // $this->validate($request, [
+    //     //     'tanggal' => 'required',
+    //     //     'waktu'=> 'required',
+    //     //     'lokasi'=> 'required',
+    //     //     'suhu'=> 'required',
+    //     // ]);
+    //     perjalanan::create([
+    //         'user_id' =>$user->id,
+    //         'tanggal' =>$request->tanggal,
+    //         'waktu' =>$request->waktu,
+    //         'lokasi' =>$request->lokasi,
+    //         'suhu' =>$request->suhu,
+    //     ]);
+    //     return redirect()->route('perjalanan');
+    // }
+
 
     public function create(Request $request){
         // dd($request);

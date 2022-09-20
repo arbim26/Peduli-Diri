@@ -13,9 +13,14 @@ class Perjalanan extends Model
     protected $table = 'perjalanan';
     protected $fillable = ['user_id','tanggal','waktu','lokasi','suhu'];
 
-    public function perjalanan()
+    // public function perjalanan()
+    // {
+    //  return $this->hasMany(App::Perjalanan);
+    // }
+
+    public function user()
     {
-     return $this->hasMany('App\Perjalanan');
+        return $this->hasMany(User::class);
     }
 }
 

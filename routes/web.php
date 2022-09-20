@@ -34,9 +34,6 @@ Route::middleware(['auth:user'])->group(function () {
     Route::get('/tambah', function () {
         return view('tambah.tambah');
     });
-    
-    
-    
 });
 Route::get('/admin', function () {
     return view('indexadmin');
