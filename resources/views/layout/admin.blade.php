@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../Assets/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="../Assets/images/favicon.png" />
+    
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

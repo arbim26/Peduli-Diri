@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerjalananController; 
+use App\Http\Controllers\UserController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,7 @@ Route::middleware(['auth:user'])->group(function () {
 Route::get('/admin', function () {
     return view('indexadmin');
 });
+
+Route::get('/duser',[UserController::class,'duser'])->name('duser');
+Route::post('/updateuser/{id}', [UserController::class, 'update']);
+Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
