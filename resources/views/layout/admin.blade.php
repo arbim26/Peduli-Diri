@@ -38,11 +38,8 @@
                         <a class="nav-link active text-primary fs-30" aria-current="page" href="/dashboard">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/user">Data User
+                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User
                             Perjalanan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/perjalananadmin">Data Perjalanan</a>
                     </li>
 
                 </ul>
