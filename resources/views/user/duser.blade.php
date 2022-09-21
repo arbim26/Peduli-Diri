@@ -23,7 +23,7 @@
                     @endphp
                       @foreach($data as $row)
                         <tr>
-                            <td>{{$no++}}</td>
+                            <td>{{$row->id}}</td>
                             <td>{{$row->name}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->nik}}</td>

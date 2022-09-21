@@ -48,5 +48,6 @@ Route::middleware(['auth:admin'])->group(function () {
 });
 
 Route::get('/duser',[UserController::class,'duser'])->name('duser');
+Route::get('/viewuser/{id}', [UserController::class, 'view']);
 Route::post('/updateuser/{id}', [UserController::class, 'update']);
 Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
