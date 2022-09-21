@@ -40,8 +40,7 @@
                         <a class="nav-link active text-primary fs-30" aria-current="page" href="/dashboard">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User
-                            Perjalanan</a>
+                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User</a>
                     </li>
 
                 </ul>

@@ -14,6 +14,12 @@ class UserController extends Controller
         return view('user.duser',compact('data'));
     }
 
+    public function view($id){
+        $data = User::find($id);
+
+        return view('user.euser',compact('data'));
+    }
+
     public function update(Request $request, $id){
         $data = User::find($id);
         $data->update($request->all());
