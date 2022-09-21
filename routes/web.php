@@ -31,12 +31,9 @@ Route::middleware(['auth:user'])->group(function () {
         return view('index');
     });
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
-    Route::get('/tambah', function () {
-        return view('tambah.tambah');
-    });
+    Route::get('/tambah', function () {return view('tambah.tambah');});
+    Route::post('/insert', [PerjalananController::class, 'create']);
 });
 Route::get('/admin', function () {
     return view('indexadmin');
 });
-
-Route::post('/insert', [PerjalananController::class, 'create']);
