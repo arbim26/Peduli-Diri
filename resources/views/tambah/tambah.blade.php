@@ -12,10 +12,6 @@
                   <form class="forms-sample" action="/insert" method="POST">
                     @csrf
                     <div class="form-group">
-                      <label for="nik">Nik</label>
-                      <input type="number" name="user_id" class="form-control" id="user_id" placeholder="ID USER">
-                    </div>
-                    <div class="form-group">
                       <label for="tanggal">Tanggal</label>
                       <input type="date" name="tanggal" class="form-control" id="tanggal" placeholder="DD/MM/YY">
                     </div>

@@ -30,6 +30,7 @@ Route::get('/logout',[LoginController::class, 'logout']);
 Route::middleware(['auth:user'])->group(function () {
     Route::get('/dashboard',[PerjalananController::class,'dashboard'])->name('dashboard');
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
+    Route::post('/insert',[PerjalananController::class,'create'])->name('create');
     Route::get('/tambah',[PerjalananController::class,'tambah'])->name('tambah');
 });
 

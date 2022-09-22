@@ -29,7 +29,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="/dashboard"><img src="../Assets/images/logo.svg"
+                <a class="navbar-brand brand-logo mr-5" href="/dashboard"><img src="../Assets/images/logo.png"
                         class="mr-2" alt="logo" /></a>
                 <a class="navbar-brand brand-logo-mini" href="/dashboard"><img src="../Assets/images/logo-mini.svg"
                         alt="logo" /></a>
@@ -47,18 +47,9 @@
             </div>
         </nav>
         <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
-            <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
-                <div class="">
-                    <img src="../img/Zeta.jpg" class="rounded w-75 mt-3" alt="...">
-                    <h4 class="mt-3 text-primary">Nama : Vestia Zeta</h>
-                        <h6 class="mt-3 text-primary">Nik : 0082199023090</h6>
-                </div>
-                <a href="/logout" class="btn btn-danger mt-5">Logout</a>
-            </nav>
+        <div class="container page-body-wrapper">
 
-            <div class="main-panel">
+            <div class="">
 
              @yield('content')
 
