@@ -10,15 +10,15 @@
                     @csrf
                     <div class="form-group">
                       <label for="name">Nama</label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="NAMA">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="NAMA" value="{{$data->name}}">
                     </div>
                     <div class="form-group">
                       <label for="tanggal">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" value="{{$data->email}}">
                     </div>
                     <div class="form-group">
                       <label for="waktu">Nik</label>
-                      <input type="number" name="nik" class="form-control" id="nik" placeholder="NIK">
+                      <input type="number" name="nik" class="form-control" id="nik" placeholder="NIK" value="{{$data->nik}}">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a href="/duser" class="btn btn-light">Cancel</a>

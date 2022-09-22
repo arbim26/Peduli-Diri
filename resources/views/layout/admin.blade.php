@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../Assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="../Assets/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
+    
     <!-- inject:css -->
     <link rel="stylesheet" href="../Assets/css/vertical-layout-light/style.css">
     <!-- endinject -->
@@ -37,7 +38,7 @@
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-center">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/dashboard">Home</a>
+                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/admin">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User</a>

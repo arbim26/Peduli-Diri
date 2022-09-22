@@ -49,16 +49,20 @@
             </div>
         </nav>
         <!-- partial -->
-        @foreach ($posts as $post)
-        @if ($post = Auth::user())
+        
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
+            @foreach ($posts as $post)
+        @if ($post = Auth::user())
                 <div class="pt-3">
-                    <h4 class="mt-3 text-primary">Nama  : {{$post->name}}</h>
+                    <h4 class="mt-3 text-primary">Nama  : {{$post->name}}</h4>
                     <h6 class="mt-3 text-primary">Nik   : {{$post->nik}}</h6>
                     <h6 class="mt-3 text-primary">Email : {{$post->email}}</h6>
                 </div>
+                @endif
+       @endforeach
+
                 <a href="/logout" class="btn btn-danger mt-5">Logout</a>
             </nav>
 
@@ -69,9 +73,7 @@
             </div>
             <!-- page-body-wrapper ends -->
         </div>
-        @endif
-       @endforeach
-
+        
 
         <!-- container-scroller -->
 
