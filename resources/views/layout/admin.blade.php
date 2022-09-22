@@ -36,15 +36,7 @@
                         alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/admin">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User</a>
-                    </li>
-
-                </ul>
+                
             </div>
         </nav>
         <!-- partial -->
@@ -52,9 +44,7 @@
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
                 <div class="">
-                    <img src="../img/Zeta.jpg" class="rounded w-75 mt-3" alt="...">
-                    <h4 class="mt-3 text-primary">Nama : Vestia Zeta</h>
-                        <h6 class="mt-3 text-primary">Nik : 0082199023090</h6>
+
                 </div>
                 <a href="/logout" class="btn btn-danger mt-5">Logout</a>
             </nav>

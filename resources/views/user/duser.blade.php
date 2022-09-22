@@ -29,7 +29,7 @@
                             <td>{{$row->email}}</td>
                             <td>{{$row->nik}}</td>
                             <td>
-                              <a class="btn btn-link ms-auto text-end text-primary px-3 mb-0" href="/viewuser/{{$row->id}}"><i class="fa fa-calendar" style="height: 5px;"></i>Data Perjalanan</a>
+                              <a class="btn btn-link ms-auto text-end text-primary px-3 mb-0" href="/dpuser/{{$row->id}}"><i class="fa fa-calendar" style="height: 5px;"></i>Data Perjalanan</a>
                             </td>
                             <td>
                             <a class="btn btn-link ms-auto text-end text-dark px-3 mb-0" href="/viewuser/{{$row->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>

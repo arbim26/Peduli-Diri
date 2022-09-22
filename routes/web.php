@@ -28,26 +28,20 @@ Route::post('/registernew',[LoginController::class, 'registernew']);
 Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::middleware(['auth:user'])->group(function () {
-    Route::get('/dashboard', function () {
-        $posts = User::with('data')->get();
-        return view('index', ['posts' => $posts]);
-    })->name('dashboard');
-
-    // Route::get('/dashboard', function () {
-    //     return view('index');
-    // });
+    Route::get('/dashboard',[PerjalananController::class,'dashboard'])->name('dashboard');
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
-    Route::get('/tambah', function () {return view('tambah.tambah');});
-    Route::post('/insert', [PerjalananController::class, 'create']);  
+    Route::get('/tambah',[PerjalananController::class,'tambah'])->name('tambah');
+    Route::post('/insert',[PerjalananController::class,'create'])->name('create');
 });
 
 Route::middleware(['auth:admin'])->group(function () {
-    Route::get('/admin', function () {
-        return view('indexadmin');
-    });
-});
-
-Route::get('/duser',[UserController::class,'duser'])->name('duser');
+    // Route::get('/admin', function () {
+    //     return view('indexadmin');
+    // });
+    Route::get('/duser',[UserController::class,'duser'])->name('duser');
 Route::get('/viewuser/{id}', [UserController::class, 'view']);
+Route::get('/dpuser/{id}', [UserController::class, 'dpuser']);
 Route::post('/updateuser/{id}', [UserController::class, 'update']);
 Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
+});
+
