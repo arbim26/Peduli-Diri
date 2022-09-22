@@ -40,9 +40,6 @@
             </div>
         </nav>
         <!-- partial -->
-<<<<<<< HEAD
-        <div class="container page-body-wrapper">
-=======
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
@@ -51,7 +48,6 @@
                 </div>
                 <a href="/logout" class="btn btn-danger mt-5">Logout</a>
             </nav>
->>>>>>> a49034ee3ad14e09cbb475e88b760babd4bb4918
 
             <div class="">
 
