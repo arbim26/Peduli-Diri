@@ -15,6 +15,7 @@
                           <th>Email</th>
                           <th>Nik</th>
                           <th></th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -27,6 +28,9 @@
                             <td>{{$row->name}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->nik}}</td>
+                            <td>
+                              <a class="btn btn-link ms-auto text-end text-primary px-3 mb-0" href="/dpuser/{{$row->id}}"><i class="fa fa-calendar" style="height: 5px;"></i>Data Perjalanan</a>
+                            </td>
                             <td>
                             <a class="btn btn-link ms-auto text-end text-dark px-3 mb-0" href="/viewuser/{{$row->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
                         <a class="btn btn-link ms-auto text-end text-danger text-gradient px-3 mb-0" href="/deleteuser/{{$row->id}}"><i class="far fa-trash-alt me-2"></i>Delete</a></td>

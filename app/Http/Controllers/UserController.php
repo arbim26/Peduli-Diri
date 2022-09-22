@@ -31,4 +31,10 @@ class UserController extends Controller
         $data->delete();
         return redirect('duser');
     }
+
+    public function dpuser($id){
+        $user = User::find($id);
+        $data = Perjalanan::where('user_id',$user->id)->get();
+        return view('user.dpuser', compact('data'));
+    }
 }
