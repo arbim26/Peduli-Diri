@@ -50,12 +50,11 @@
         </nav>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
-                <div class="">
-                    <img src="../img/Zeta.jpg" class="rounded w-75 mt-3" alt="...">
-                    <h4 class="mt-3 text-primary">Nama : Vestia Zeta</h>
-                        <h6 class="mt-3 text-primary">Nik : 0082199023090</h6>
+                <div class="pt-3">
+                    <h4 class="mt-3 text-primary">Nama  : {{$user->name}}</h4>
+                    <h6 class="mt-3 text-primary">Nik   : {{$user->nik}}</h6>
+                    <h6 class="mt-3 text-primary">Email : {{$user->email}}</h6>
                 </div>
                 <a href="/logout" class="btn btn-danger mt-5">Logout</a>
             </nav>
@@ -67,6 +66,8 @@
             </div>
             <!-- page-body-wrapper ends -->
         </div>
+
+
         <!-- container-scroller -->
 
         <!-- plugins:js -->

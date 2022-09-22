@@ -39,7 +39,7 @@ class LoginController extends Controller
           'email'=> 'required',
           'password'=> 'required',
         ]);
-        dd($request);
+        // dd($request);
         User::create([
             'name' =>$request->name,
             'nik' =>$request->nik,

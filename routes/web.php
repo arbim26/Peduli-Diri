@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerjalananController; 
-
+use App\Http\Controllers\UserController; 
+use App\Models\Perjalanan; 
+use App\Models\User; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,14 +28,18 @@ Route::post('/registernew',[LoginController::class, 'registernew']);
 Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::middleware(['auth:user'])->group(function () {
-
-    Route::get('/dashboard', function () {
-        return view('index');
-    });
+    Route::get('/dashboard',[PerjalananController::class,'dashboard'])->name('dashboard');
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
-    Route::get('/tambah', function () {return view('tambah.tambah');});
-    Route::post('/insert', [PerjalananController::class, 'create']);
+    Route::get('/tambah',[PerjalananController::class,'tambah'])->name('tambah');
 });
-Route::get('/admin', function () {
-    return view('indexadmin');
+
+Route::middleware(['auth:admin'])->group(function () {
+    Route::get('/admin', function () {
+        return view('indexadmin');
+    });
 });
+
+Route::get('/duser',[UserController::class,'duser'])->name('duser');
+Route::get('/viewuser/{id}', [UserController::class, 'view']);
+Route::post('/updateuser/{id}', [UserController::class, 'update']);
+Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
