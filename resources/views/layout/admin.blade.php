@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../Assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="../Assets/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
+    
     <!-- inject:css -->
     <link rel="stylesheet" href="../Assets/css/vertical-layout-light/style.css">
     <!-- endinject -->
@@ -35,19 +36,22 @@
                         alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/dashboard">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fs-30" aria-current="page" href="/duser">Data User</a>
-                    </li>
-
-                </ul>
+                
             </div>
         </nav>
         <!-- partial -->
+<<<<<<< HEAD
         <div class="container page-body-wrapper">
+=======
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas text-center" id="sidebar">
+                <div class="">
+
+                </div>
+                <a href="/logout" class="btn btn-danger mt-5">Logout</a>
+            </nav>
+>>>>>>> a49034ee3ad14e09cbb475e88b760babd4bb4918
 
             <div class="">
 
