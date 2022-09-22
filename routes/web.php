@@ -27,17 +27,9 @@ Route::post('/registernew',[LoginController::class, 'registernew']);
 Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::middleware(['auth:user'])->group(function () {
-    Route::get('/dashboard', function () {
-        $posts = User::with('data')->get();
-        return view('index', ['posts' => $posts]);
-    })->name('dashboard');
-
-    // Route::get('/dashboard', function () {
-    //     return view('index');
-    // });
+    Route::get('/dashboard',[PerjalananController::class,'dashboard'])->name('dashboard');
     Route::get('/perjalanan',[PerjalananController::class,'perjalanan'])->name('perjalanan');
-    Route::get('/tambah', function () {return view('tambah.tambah');});
-    Route::post('/insert', [PerjalananController::class, 'create']);  
+    Route::get('/tambah',[PerjalananController::class,'tambah'])->name('tambah');
 });
 
 Route::middleware(['auth:admin'])->group(function () {
