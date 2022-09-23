@@ -36,4 +36,21 @@ class UserController extends Controller
         $data = Perjalanan::where('user_id',$user->id)->paginate(5);
         return view('user.dpuser', compact('data'));
     }
+
+    public function dpdestroy($id){
+        $data = Perjalanan::find($id);
+        $data->delete();
+        return back();
+    }
+
+    public function dpupdate(Request $request, $id){
+        $data = Perjalanan::find($id);
+        $data->update($request->all());
+        
+    }
+
+    public function dpview($id){
+        $data = Perjalanan::find($id);
+        return view('user.edpuser',compact('data'));
+    }
 }
