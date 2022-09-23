@@ -1,6 +1,7 @@
 @extends('layout.admin')
 
 @section('content')
+<div class="content-wrapper">
     <div class=" grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -32,4 +33,5 @@
                 </div>
               </div>
             </div>
+          </div>
 @endsection

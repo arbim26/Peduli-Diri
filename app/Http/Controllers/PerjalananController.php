@@ -26,7 +26,7 @@ class PerjalananController extends Controller
     public function perjalanan()
     { 
         $user = User::find(Auth::user()->id);
-        $data = perjalanan::where('user_id', $user->id)->get();
+        $data = perjalanan::where('user_id', $user->id)->paginate(10);
         return view('perjalanan.perjalanan',['user' => $user], compact('data'));
     }
 

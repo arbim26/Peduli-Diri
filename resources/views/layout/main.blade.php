@@ -87,6 +87,7 @@
         <script src="../Assets/js/template.js"></script>
         <script src="../Assets/js/settings.js"></script>
         <script src="../Assets/js/todolist.js"></script>
+        <script src="../Assets/js/chart.js"></script>
         <!-- endinject -->
         <!-- Custom js for this page-->
         <script src="../Assets/js/dashboard.js"></script>
