@@ -36,17 +36,14 @@ Route::middleware(['auth:user'])->group(function () {
 });
 
 Route::middleware(['auth:admin'])->group(function () {
-    // Route::get('/admin', function () {
-    //     return view('indexadmin');
-    // });
     Route::get('/duser',[UserController::class,'duser'])->name('duser');
-Route::get('/viewuser/{id}', [UserController::class, 'view']);
-Route::get('/dpuser/{id}', [UserController::class, 'dpuser'])->name('dpuser');
-Route::post('/updateuser/{id}', [UserController::class, 'update']);
-Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
+    Route::get('/viewuser/{id}', [UserController::class, 'view']);
+    Route::get('/dpuser/{id}', [UserController::class, 'dpuser'])->name('dpuser');
+    Route::post('/updateuser/{id}', [UserController::class, 'update']);
+    Route::get('/deleteuser/{id}', [UserController::class, 'destroy']);
 
-Route::get('/vdpuser/{id}', [UserController::class, 'dpview'])->name('dpview');
-Route::post('/udpuser/{id}', [UserController::class, 'dpupdate']);
-Route::get('/ddpuser/{id}', [UserController::class, 'dpdestroy']);
+    Route::get('/vdpuser/{id}', [UserController::class, 'dpview'])->name('dpview');
+    Route::post('/udpuser/{id}', [UserController::class, 'dpupdate']);
+    Route::get('/ddpuser/{id}', [UserController::class, 'dpdestroy']);
 });
 

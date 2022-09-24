@@ -19,7 +19,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                      @foreach($user as $row)
+                      @foreach($data as $row)
                         <tr>
                             <td>{{$row->tanggal}}</td>
                             <td>{{$row->waktu}}</td>
