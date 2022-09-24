@@ -19,7 +19,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                      @foreach($data as $row)
+                      @foreach($user as $row)
                         <tr>
                             <td>{{$row->tanggal}}</td>
                             <td>{{$row->waktu}}</td>
@@ -34,7 +34,6 @@
 
                       </tbody>
                     </table>
-                    {{ $data->links() }}
                   </div>
                 </div>
               </div>

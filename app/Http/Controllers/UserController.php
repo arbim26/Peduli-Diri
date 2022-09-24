@@ -10,12 +10,13 @@ use Illuminate\Routing\Controller;
 class UserController extends Controller
 {
     public function duser(){
-        $data = User::paginate(8);
+        $data = User::all();
         return view('user.duser',compact('data'));
     }
 
     public function view($id){
         $data = User::find($id);
+
         return view('user.euser',compact('data'));
     }
 
@@ -33,7 +34,7 @@ class UserController extends Controller
 
     public function dpuser($id){
         $user = User::find($id);
-        $data = Perjalanan::where('user_id',$user->id)->paginate(5);
+        $data = Perjalanan::where('user_id',$user->id)->get();
         return view('user.dpuser', compact('data'));
     }
 
